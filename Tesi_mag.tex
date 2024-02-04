@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{images/}
+\usepackage[acronym]{glossaries}
+
+    \title{A Supervised Machine Learning\\ and a Statistic approach,\\ for salience detection in the movement context.}
+    \author{Serafino Gabriele\\ Lo Luca}
+    \date{January 2024}
+
+
+%lista acronimi non funziona
+    \newacronym{h}{HTML}{Hypertext Markup Language}
+    \newacronym{c}{CSS}{Cascading Style Sheets}
+
+    
+\begin{document}
+
+    \maketitle
+    
+    \newpage
+    \begin{abstract}
+        In contemporary research, the topic of salience has become a focal point, with a growing number of studies dedicated to its exploration.\\ Various fields, including Medical, Financial, Military, Psychology, Kinesiology,  have approached the problem in diverse ways.\\
+        Our thesis aims to develop effective heuristics and algorithmic approaches for detecting salience in the context of movement. Specifically, we focused on the domain of dance movements, defining a concept of salience within this context.\\ 
+        The study involves a thorough analysis of motion capture (MOCAP) data, where we navigate dataset constraints and boundaries to select significant features that aptly represent our chosen domain.\\
+        To address the salience detection problem, we employ two distinct approaches: a Supervised Machine Learning Algorithm (Random Forest) and a statistical approach (CUSUM).\\
+        For both approaches we defined a specific prototype of sliding window able to convey information through several frames of the videos, with the goal of giving to the specific model the most significant piece of information to the algorithm in order to have the best results.\\
+        In the case of the ML approach, we tested the algorithm at different levels of generalization.\\
+        The goal of this research is to setting the basis for an online tool, able to recognize a salience in real time. 
+    \end{abstract} 
+        
+    \newpage
+        
+    \tableofcontents
+    \newpage
+    
+    \listoffigures
+    \newpage
+    
+    \listoftables
+    \newpage
+    %lista acronimi se funzionasse
+    \printglossary[type=\acronymtype]
+    \newpage
+    
+        \section{Introduction}
+            \subsection{Introduction to salience problem }
+            \subsection{State of the Art CPD algorithm}
+            \subsection{Thesis structure}       
+        \newpage
+        
+        \section{Context}
+        
+            \subsection{State of the art}
+            \subsection{Salience definition}
+                \subsubsection{Ground Truth definition}
+            \subsection{Features definition}
+                \subsubsection{Features selection}
+                % use some images for explaining
+        \newpage
+        \section{Supervised ML approach}
+            \subsection{Data}
+                \subsubsection{Sliding windows}
+                \subsubsection{Data Cleaning}
+            \subsection{Features creation}
+            \subsection{Model selection}
+            \subsection{Results}
+                \subsubsection{LOSO}
+                \subsubsection{LOTO}
+                \subsubsection{LOBO}
+        \newpage
+        \section{Statistic approach}
+            \subsection{Sliding windows}
+            \subsection{Features Selection}
+            \subsection{CUSUM model}
+            \subsection{Results}
+        \section{ML vs CUSUM}
+        \section{Conclusions}
+        \section{Future Research}
+        \bibliography{}
+
+
+\end{document}
